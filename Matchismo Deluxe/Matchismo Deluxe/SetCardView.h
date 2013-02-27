@@ -15,9 +15,9 @@
 @property (nonatomic) NSUInteger shading;
 @property (nonatomic) NSUInteger color;
 
-
 @property (nonatomic, getter = isSelected) BOOL selected;
 @property (nonatomic, getter = isHinted) BOOL hinted;
+@property (nonatomic, getter = isInPlay) BOOL inPlay;
 
 - (void)pinch:(UIPinchGestureRecognizer *)gesture;
 

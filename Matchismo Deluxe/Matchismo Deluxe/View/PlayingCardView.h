@@ -13,7 +13,7 @@
 @property (nonatomic) NSUInteger rank;
 @property (strong, nonatomic) NSString *suit;
 
-@property (nonatomic) BOOL faceUp;
+@property (nonatomic, getter = isFaceUp) BOOL faceUp;
 
 - (void)pinch:(UIPinchGestureRecognizer *)gesture;
 

@@ -144,7 +144,7 @@
 
 #pragma mark - Corners
 
-#define CORNER_RADIUS 12.0
+#define CORNER_RADIUS 6.0
 #define CORNER_INSET 2.0
 #define CORNER_FONT_SCALE_FACTOR 0.2
 

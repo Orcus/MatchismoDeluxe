@@ -87,8 +87,9 @@
 #pragma mark - Graphics
 
 #define CORNER_RADIUS 12.0
-#define SELECTED_INSET 3.0
-#define SELECTED_LIGHT_PERCENT 0.5
+#define SELECTED_INSET 4.0
+#define SELECTED_LIGHT_PERCENT 0.85
+#define HINTED_LIGHT_PERCENT 0.6
 
 - (void)drawRect:(CGRect)rect
 {
@@ -99,11 +100,16 @@
     // draw background
     if (self.isHinted) {
         // light yellow
-        [[UIColor colorWithRed:1.0 green:1.0 blue:SELECTED_LIGHT_PERCENT alpha:1.0] setFill];
+        [[UIColor colorWithRed:1.0 green:1.0 blue:HINTED_LIGHT_PERCENT alpha:1.0] setFill];
+    } else if (self.isSelected) {
+        // lighter gray
+        [[UIColor colorWithRed:SELECTED_LIGHT_PERCENT
+                         green:SELECTED_LIGHT_PERCENT
+                          blue:SELECTED_LIGHT_PERCENT alpha:1.0] setFill];
     } else {
         [[UIColor whiteColor] setFill];
     }
-    
+
     UIRectFill(self.bounds);
 
     // draw outline
